@@ -135,8 +135,11 @@ img {
 
 .section__heading {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
+  margin-bottom: 44px;
 }
 
 .section__title {
@@ -146,8 +149,9 @@ img {
 }
 
 .rests__search {
-  min-width: 306px;
-  padding: 5px 12px 5px 32px;
+  max-width: 306px;
+  min-width: 290px;
+  padding: 5px 12px;
   border-radius: 2px;
   border: 1px solid #d9d9d9;
   background: #ffffff;
@@ -158,6 +162,110 @@ img {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 24px;
+}
+
+.card {
+  width: calc((100% - 24px - 24px) / 3);
+  border-radius: 7px;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card__pic {
+  min-width: 100%;
+}
+
+.card__desc {
+  padding: 20px 24px 35px;
+}
+
+.card__desc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card__title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+}
+
+.card__badge {
+  padding: 1px 8px;
+  border-radius: 2px;
+  background: #262626;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+}
+
+.card__desc-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+}
+
+.card__desc-info_rating {
+  display: flex;
+  /* align-items: center; */
+  gap: 7.5px;
+}
+
+.card__desc-info_icon {
+  vertical-align: middle;
+}
+
+.card__desc-info_rating-value {
+  color: #ffc107;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px; /* 177.778% */
+}
+
+.card__desc-info_price,
+.card__desc-info_group {
+  color: #8c8c8c;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px; /* 177.778% */
+  position: relative;
+}
+
+.card__desc-info_group::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: -14px;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #8c8c8c;
+}
+
+@media (max-width: 1023px) {
+  .card {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
 }
 
 /* Footer */
